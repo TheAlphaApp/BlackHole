@@ -220,8 +220,6 @@ class AudioPlayerHandlerImpl extends BaseAudioHandler
         .pipe(queue);
 
     if (loadStart) {
-      // final lastQueueListBox = await Hive.box('cache')
-      //     .get('lastQueue', defaultValue: []);
       final List lastQueueList = await Hive.box('cache')
           .get('lastQueue', defaultValue: [])?.toList() as List;
 
